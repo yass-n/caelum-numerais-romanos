@@ -1,0 +1,26 @@
+<ivy-module version="2.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+	<info organisation="agiletickets" module="agiletickets" />
+
+	<configurations>
+		<conf name="default" description="dependencies used for compile" />
+		<conf name="provided" description="dependencies used for compile but is not packaged" visibility="public" />
+		<conf name="test" description="dependencies used for tests" visibility="public" />
+		<conf name="acceptance-test" description="dependencies used for acceptance tests" visibility="public" />
+	</configurations>
+
+	<dependencies>
+
+		<!-- Provided dependencies -->
+		<dependency org="javax.servlet" name="javax.servlet-api" rev="3.1.0" conf="provided->default" />
+
+		<!-- Test dependencies -->
+		<dependency org="junit" name="junit" rev="4.8.2" conf="test->default" />
+		
+		<!-- Acceptance Test dependencies -->
+		<dependency org="org.seleniumhq.selenium" name="selenium-java" rev="2.53.1" conf="acceptance-test->default"/>
+		<dependency org="org.seleniumhq.selenium" name="selenium-firefox-driver" rev="2.53.1" conf="acceptance-test->default"/>
+		<dependency org="org.seleniumhq.selenium" name="selenium-server" rev="2.53.1" conf="acceptance-test->default"/>
+	</dependencies>
+</ivy-module>
