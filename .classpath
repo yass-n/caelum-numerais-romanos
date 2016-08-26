@@ -11,16 +11,9 @@
 			<attribute name="owner.project.facets" value="#system#;jst.web"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
-		<attributes>
-			<attribute name="owner.project.facets" value="java"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="lib/acceptance-test/cglib-nodep-2.1_3.jar"/>
 	<classpathentry kind="lib" path="lib/acceptance-test/commons-io-2.4.jar"/>
 	<classpathentry kind="lib" path="lib/test/junit-4.8.2.jar"/>
-	<classpathentry kind="lib" path="lib/test/mockito-all-1.8.5.jar"/>
-	<classpathentry kind="lib" path="lib/test/hamcrest-all-1.1.jar"/>
 	<classpathentry kind="lib" path="lib/acceptance-test/selenium-remote-driver-2.53.1.jar"/>
 	<classpathentry kind="lib" path="lib/acceptance-test/selenium-api-2.53.1.jar"/>
 	<classpathentry kind="lib" path="lib/acceptance-test/selenium-firefox-driver-2.53.1.jar"/>
@@ -52,5 +45,10 @@
 	<classpathentry kind="lib" path="lib/acceptance-test/selenium-server-2.53.1.jar"/>
 	<classpathentry kind="lib" path="lib/acceptance-test/selenium-support-2.53.1.jar"/>
 	<classpathentry kind="lib" path="lib/acceptance-test/snakeyaml-1.8.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java-8-oracle">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="src/main/webapp/WEB-INF/classes"/>
 </classpath>

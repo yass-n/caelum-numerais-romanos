@@ -41,7 +41,7 @@ public class ConversorDecimalRomano {
                     divisor = n;
                 }
             }
-            resto = resto % divisor;
+            resto = resto - divisor;
             romano += simbolos.get(divisor);
         }
         

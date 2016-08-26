@@ -16,9 +16,9 @@ public class ConversorDecimalRomanoTest {
     
     @Test
     public void deveConverterNumeroDecimalParaRomano() {
-        int n = 2000;
+        int n = 3999;
         String romano = conversor.converte(n);
         
-        assertEquals("MM", romano);
+        assertEquals("MMMCMXCIX", romano);
     }
 }

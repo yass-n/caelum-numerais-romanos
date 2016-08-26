@@ -1,6 +1,6 @@
 package br.com.caelum.romanos.acceptance;
 
-import static org.hamcrest.Matchers.containsString;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
 import org.junit.AfterClass;
@@ -23,7 +23,7 @@ public class NumeraisRomanosTest {
 
 	@AfterClass
 	public static void teardown() {
-//		browser.close();
+		browser.close();
 	}
 
 	@Test
@@ -36,7 +36,7 @@ public class NumeraisRomanosTest {
         form.submit();
         
         WebElement romano = browser.findElement(By.id("romano"));
-        assertThat(romano.getText(), containsString("MMMCMXCIX"));
+        assertEquals("MMMCMXCIX", romano.getText());
 	}
 	
 }
