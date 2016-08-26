@@ -9,19 +9,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.caelum.romanos.conversor.ConversorDecimalRomano;
+import br.com.caelum.romanos.conversor.ConversorNumeroRomano;
 
 @WebServlet("/converte")
-public class RomanoServlet extends HttpServlet {
+public class ConversorNumeroRomanoServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Integer numero = Integer.parseInt(req.getParameter("numero"));
         
-        ConversorDecimalRomano conversor = new ConversorDecimalRomano();
+        ConversorNumeroRomano conversor = new ConversorNumeroRomano();
 
         PrintWriter out = resp.getWriter();
-        // escreve o texto
+
         out.println("<html>");
         out.println("<body>");
         out.println("<p id='romano'>" + conversor.converte(numero) + "</p>");

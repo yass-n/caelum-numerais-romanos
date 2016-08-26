@@ -3,11 +3,11 @@ package br.com.caelum.romanos.conversor;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class ConversorDecimalRomano {
+public class ConversorNumeroRomano {
     
     private static Map<Integer, String> simbolos = new TreeMap<>();
     
-    public ConversorDecimalRomano() {
+    public ConversorNumeroRomano() {
         simbolos.put(1, "I");
         simbolos.put(2, "II");
         simbolos.put(3, "III");
@@ -31,18 +31,17 @@ public class ConversorDecimalRomano {
     }
     
     public String converte(int numero) {
-        int divisor = 1;
         String romano = "";
-
-        int resto = numero;
-        while (resto > 0) {         
-            for (int n : simbolos.keySet()) {
-                if (resto % n != resto) {
-                    divisor = n;
+        
+        while (numero > 0) {
+            int maior = 1;
+            for (Integer i : simbolos.keySet()) {
+                if (numero - i > -1) {
+                    maior = i;
                 }
             }
-            resto = resto - divisor;
-            romano += simbolos.get(divisor);
+            numero -= maior;
+            romano += simbolos.get(maior);
         }
         
         return romano;
