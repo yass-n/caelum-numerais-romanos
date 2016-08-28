@@ -31,7 +31,7 @@ public class ConversorNumeroRomano {
     }
 
     public String converte(int numero) {
-        if (numero < 1) {
+        if (numero < 1||numero >=4000  ) {
             throw new IllegalArgumentException();
         }
 

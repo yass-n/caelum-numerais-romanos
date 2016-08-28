@@ -29,6 +29,11 @@ public class ConversorNumeroRomanoTest {
         conversor.converte(-1);
     }
 
+    @Test(expected=IllegalArgumentException.class)
+    public void naoDeveConverterNumerosSuperioresOuIguaisAQuatroMil() {
+        conversor.converte(4000);
+    }
+    
 
     @Test
     public void deveConverterNumeroParaRomano() {
