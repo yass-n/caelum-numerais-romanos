@@ -19,6 +19,16 @@ public class ConversorNumeroRomanoTest {
         simbolos = getSimbolos();
     }
 
+    @Test(expected=IllegalArgumentException.class)
+    public void naoDeveConverterZero() {
+        conversor.converte(0);
+    }
+
+    @Test(expected=IllegalArgumentException.class)
+    public void naoDeveConverterNumerosNegativos() {
+        conversor.converte(-1);
+    }
+
 
     @Test
     public void deveConverterNumeroParaRomano() {
